@@ -13,7 +13,7 @@ export default function App({ Component, pageProps, ...appProps }) {
   const LayoutComponent = isLayoutNeeded ? Layout : React.Fragment;
 
   return (
-    <ThemeProvider defaultTheme='light' attribute='class' className="dark">
+    <ThemeProvider defaultTheme='light' attribute='class' >
       <LayoutComponent>
         <Component {...pageProps} />
       </LayoutComponent>
