@@ -1,34 +1,19 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
-import Brand from '../Brand'
-import DarkModeHandler from '../DarkModeHandler'
-import NavLink from '../NavLink'
 import Image from 'next/image';
+
 const Navbar = () => {
 
     const menuBtnEl = useRef()
     const [state, setState] = useState(false)
     const { pathname } = useRouter();
 
-    // array of all the paths that doesn't need dark navbar
-    const pathnames = ["/tutorials/[lesson]/[slug]"]
-    const isLightNeeded = pathnames.includes(pathname)
-    // Method to add custom color based on the path
-    const addColor = (lightColor, darkColor) => isLightNeeded ? lightColor : darkColor
-
-    // Navbar background color config
-    const bgColor = addColor("bg-white", "bg-gray-900")
-    // Brand Color config
-    const brandColor = addColor("text-gray-900", "text-white")
-    // Navigation links color config
-    const navLinkColor = addColor("text-gray-700 hover:text-blue-600 md:text-gray-600", "text-gray-200 hover:text-sky-500")
-    // Navbar menu nutton config
-    const navMenuBtnColor = addColor("text-gray-500 hover:bg-gray-50", "text-gray-400 hover:bg-gray-800")
-
-    const navigation = [
-      
-    ]
+    // Always use dark mode, no need to check for path-based color
+    const bgColor = "bg-gray-900"
+    const brandColor = "text-white"
+    const navLinkColor = "text-gray-200 hover:text-sky-500"
+    const navMenuBtnColor = "text-gray-400 hover:bg-gray-800"
 
     useEffect(() => {
 
@@ -40,34 +25,26 @@ const Navbar = () => {
         window.onscroll = () => setState(false);
     }, [])
 
-    const DarkModeBtn = () => <DarkModeHandler className={`dark:text-sky-500 ${addColor("text-blue-600 hover:bg-gray-50", "text-sky-500 hover:bg-gray-800")}`} />
-
     return (
         <header>
             <nav className={`${bgColor} dark:bg-gray-900 w-full md:static md:text-sm ${state ? "relative z-20" : ""}`}>
                 <div className="custom-screen relative items-center mx-auto md:flex">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Link href="/" aria-label="Logo">
-                       
-                       
-                       
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-      {/* Logo */}
-      <Image
-        src="/on-button.png" // Path to the logo
-        alt="Logo"
-        width={50} // Customize width
-        height={50} // Customize height
-      />
-      {/* Name of the logo */}
-      <span className={`${navLinkColor} dark:text-gray-200 dark:hover:text-sky-500 duration-150`} style={{ fontSize: '25px', fontWeight: 'bold' }} >WebOnDemand</span>
-    </div>
-      
-        
-                        
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                {/* Logo */}
+                                <Image
+                                    src="/on-button.png" // Path to the logo
+                                    alt="Logo"
+                                    width={50} // Customize width
+                                    height={50} // Customize height
+                                />
+                                {/* Name of the logo */}
+                                <span className={`${navLinkColor} dark:text-gray-200 dark:hover:text-sky-500 duration-150`} style={{ fontSize: '25px', fontWeight: 'bold' }} >WebOnDemand</span>
+                            </div>
                         </Link>
+
                         <div className="flex gap-x-3 items-center md:hidden">
-                            <DarkModeBtn />
                             <button ref={menuBtnEl} role="button" aria-label="Open the menu" className={`p-2 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 ${navMenuBtnColor}`}
                                 onClick={() => setState(state)}
                             >
@@ -87,28 +64,10 @@ const Navbar = () => {
                     </div>
                     <div className={`${bgColor} dark:bg-gray-900 flex-1 md:py-0 md:block md:static md:z-0 ${state ? "absolute z-20 inset-x-0 px-4 py-6 w-full" : "hidden"}`}>
                         <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 md:font-medium">
-                            {
-                                navigation.map((item, idx) => {
-                                    return (
-                                        <li key={idx} className={`${navLinkColor} dark:text-gray-200 dark:hover:text-sky-500 duration-150`}>
-                                            <Link
-                                                href={item.href}
-                                                className="block"
-                                                scroll={false}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        </li>
-                                    )
-                                })
-                            }
+                            {/* No items in the navigation array yet */}
                             <li>
-                                <span className={`${addColor("bg-gray-300", "bg-gray-800")} dark:bg-gray-700 hidden w-px h-5 md:block`}></span>
+                                <span className={`${"bg-gray-800"} dark:bg-gray-700 hidden w-px h-5 md:block`}></span>
                             </li>
-                            <li className='hidden md:block'>
-                                <DarkModeBtn />
-                            </li>
-      
                         </ul>
                     </div>
                 </div>
