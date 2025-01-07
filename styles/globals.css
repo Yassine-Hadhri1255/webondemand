@@ -11,3 +11,14 @@
 .plyr {
     border-radius: 8px;
 }
+
+html, body {
+    background-color: #111827; /* Dark background */
+    color: #e5e7eb; /* Light text color */
+    font-family: 'Inter', sans-serif;
+}
+
+
+header, nav {
+    background-color: #111827; /* Navbar background */
+}
