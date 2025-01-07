@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import React from "react";
-
+import '../styles/globals.css'; 
 export default function App({ Component, pageProps, ...appProps }) {
   // use a LayoutComponent variable
   // that switches to actual Layout or React.Fragment (no layout)
@@ -13,7 +13,7 @@ export default function App({ Component, pageProps, ...appProps }) {
   const LayoutComponent = isLayoutNeeded ? Layout : React.Fragment;
 
   return (
-    <ThemeProvider defaultTheme='light' attribute='class'>
+    <ThemeProvider defaultTheme='light' attribute='class' className="dark">
       <LayoutComponent>
         <Component {...pageProps} />
       </LayoutComponent>
