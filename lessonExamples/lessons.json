@@ -1,0 +1,34 @@
+[
+    {
+        "thumbnail": "/thumbnails/pexels-drew-williams-1285451-3098683.jpg",
+        "lesson": "https://res.cloudinary.com/floatui/video/upload/v1673211729/cs50_h7vvpl.3gp",
+        "title": "Création de Sites Web",
+        "description": "Un site web unique qui reflète votre marque et engage vos visiteurs pour maximiser votre présence en ligne.",
+        "duration": "Création de Sites Web",
+        "slug": "introduction-to-computer-science"
+    },
+    {
+        "thumbnail": "/thumbnails/pexels-karolina-grabowska-5632407.jpg",
+        "lesson": "https://res.cloudinary.com/floatui/video/upload/v1669411003/Binary_Search_Algorithm_in_100_Seconds_hyg6n5.mp4",
+        "title": "Site E-commerce",
+        "description": "Une boutique en ligne optimisée pour convertir vos visiteurs en clients et favoriser la croissance.",
+        "duration": "Site E-commerce",
+        "slug": "data-structures-and-algorithms"
+    },
+    {
+        "thumbnail": "/thumbnails/databases.png",
+        "lesson": "https://res.cloudinary.com/floatui/video/upload/v1673211729/cs50_h7vvpl.3gp",
+        "title": "Publicité en ligne",
+        "description": "Des campagnes publicitaires stratégiques et optimisées pour accroître votre visibilité et votre retour sur investissement.",
+        "duration": "Publicité en ligne",
+        "slug": "sql-and-nosql-databases"
+    },
+    {
+        "thumbnail": "/thumbnails/pexels-ann-h-45017-1762851.jpg",
+        "lesson": "https://res.cloudinary.com/floatui/video/upload/v1673211729/cs50_h7vvpl.3gp",
+        "title": "Design Graphique",
+        "description": "Des visuels attractifs et personnalisés pour renforcer votre image de marque et capter l’attention de votre audience.",
+        "duration": "Design Graphique",
+        "slug": "computer-architecture"
+    }
+]
