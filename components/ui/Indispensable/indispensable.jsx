@@ -70,7 +70,7 @@ function Indispensable() {
                         <h5 className="text-green-600 dark:text-green-400 text-xl font-extrabold uppercase tracking-wide mb-2">
                             SITE INTERNET
                         </h5>
-                        <h2 className="dark:text-gray-50 text-3xl sm:text-4xl font-extrabold leading-snug">
+                        <h2 className="dark:text-gray-50 text-3xl sm:text-4xl font-extrabold leading-snug text-white">
                             Pourquoi un site professionnel est indispensable pour votre entreprise ?
                         </h2>
                         <h4 className="text-gray-600 dark:text-gray-300 mt-6 text-lg font-medium italic" style={{ color: "#808080" }}>
@@ -79,20 +79,26 @@ function Indispensable() {
                     </div>
                 </center>
 
-                <div className="mt-12">
-                    <ul className="grid gap-y-12 gap-x-12 sm:grid-cols-2 lg:grid-cols-3 px-4">
-                        {features.map((item, idx) => (
-                            <li key={idx} className="flex gap-x-4 transform transition-transform duration-300 ease-in-out hover:scale-105">
-                                <div className="w-full p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:bg-green-50 hover:border-green-500">
-                                    <h3 className="text-xl text-gray-800 dark:text-gray-100 font-semibold">
-                                        {item.title}
-                                    </h3>
-                                    <div className="mt-4 text-gray-700 dark:text-gray-300">{item.desc}</div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+  <div className="mt-12">
+    <ul className="grid gap-y-12 gap-x-12 sm:grid-cols-2 lg:grid-cols-3 px-4">
+        {features.map((item, idx) => (
+            <li
+                key={idx}
+                className="flex gap-x-4 transform transition-transform duration-200 ease-in-out hover:scale-102"
+            >
+                <div
+                    className="w-full p-6 bg-gray-800 dark:bg-gray-900 border border-gray-700 rounded-lg shadow-md transition-all duration-200 ease-in-out hover:shadow-lg hover:border-green-400"
+                >
+                    <h3 className="text-lg text-gray-200 dark:text-gray-100 font-medium">
+                        {item.title}
+                    </h3>
+                    <div className="mt-3 text-gray-400 dark:text-gray-300">{item.desc}</div>
                 </div>
+            </li>
+        ))}
+    </ul>
+</div>
+
             </div>
         </SectionWrapper>
     );
