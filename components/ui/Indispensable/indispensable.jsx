@@ -63,7 +63,7 @@ function Indispensable() {
 
     return (
       
-        <SectionWrapper id="features" className="dark:my-0 bg-gray-50 dark:bg-gray-900 sm:my-16">
+        <SectionWrapper id="features" className="py-5 sm:py-28 bg-gray-900 dark:my-0 bg-gray-50 dark:bg-gray-900 sm:my-16">
             <div className="custom-screen text-gray-600 dark:text-gray-300 py-10">
                 <center>
                     <div className="max-w-5xl px-6 py-10">
