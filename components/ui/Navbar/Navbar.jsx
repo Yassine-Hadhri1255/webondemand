@@ -7,19 +7,23 @@ import Image from 'next/image';
 const Navbar = () => {
     const menuBtnEl = useRef();
     const [state, setState] = useState(false);
+    const [bgColor, setBgColor] = useState("bg-gray-900"); // Default background color
     const { pathname } = useRouter();
 
-    // Default to dark mode
-    const bgColor = "bg-gray-900";
     const brandColor = "text-white";
     const navLinkColor = "text-gray-200 hover:text-sky-500";
     const navMenuBtnColor = "text-gray-400 hover:bg-gray-800";
 
     const navigation = [
-        // Define your navigation items here, e.g.,
+        // Define your navigation items here
         // { name: 'Home', href: '/' },
         // { name: 'About', href: '/about' },
     ];
+
+    useEffect(() => {
+        // Set default background color on initial load
+        setBgColor("bg-gray-900");
+    }, []);
 
     useEffect(() => {
         // Close the navbar menu when clicking outside the menu button or when scrolling
@@ -36,7 +40,11 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className={`${bgColor} w-full md:static md:text-sm ${state ? 'relative z-20' : ''}`}>
+            <nav
+                className={`${bgColor} w-full md:static md:text-sm ${
+                    state ? "relative z-20" : ""
+                }`}
+            >
                 <div className="custom-screen relative items-center mx-auto md:flex">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Link href="/" aria-label="Logo">
@@ -98,30 +106,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-                    <div
-                        className={`${bgColor} flex-1 md:py-0 md:block md:static md:z-0 ${
-                            state ? 'absolute z-20 inset-x-0 px-4 py-6 w-full' : 'hidden'
-                        }`}
-                    >
-                        <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 md:font-medium">
-                            {navigation.map((item, idx) => (
-                                <li
-                                    key={idx}
-                                    className={`${navLinkColor} dark:text-gray-200 dark:hover:text-sky-500 duration-150`}
-                                >
-                                    <Link href={item.href} className="block" scroll={false}>
-                                        {item.name}
-                                    </Link>
-                                </li>
-                            ))}
-                            <li>
-                                <span className="bg-gray-800 hidden w-px h-5 md:block"></span>
-                            </li>
-                            <li className="hidden md:block">
-                                <DarkModeBtn />
-                            </li>
-                        </ul>
-                    </div>
+
                 </div>
             </nav>
         </header>
