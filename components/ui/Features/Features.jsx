@@ -63,7 +63,7 @@ const Features = () => {
     <SectionWrapper id="features" className="dark:my-0 bg-gray-50 dark:bg-gray-900 sm:my-16">
       <div className="custom-screen text-gray-600 dark:text-gray-300">
         <div className="max-w-7xl mx-auto px-8 py-10">
-          <h2 className="text-gray-800 dark:text-gray-50 text-3xl font-semibold sm:text-4xl mb-6">
+          <h2 className="text-white dark:text-gray-50 text-3xl font-semibold sm:text-4xl mb-6 ">
             Les piliers de notre engagement
           </h2>
 
@@ -76,15 +76,15 @@ const Features = () => {
                 >
                   <div
                     style={{ color: 'green' }}
-                    className="flex-none w-16 h-16 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center shadow-md group-hover:bg-green-600 group-hover:text-white transition-colors duration-300"
+                    className="flex-none w-16 h-16 bg-gray-900 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center shadow-md group-hover:bg-green-600 group-hover:text-white transition-colors duration-300"
                   >
                     {item.icon}
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-xl text-gray-800 dark:text-gray-100 font-semibold mb-2">
+                    <h3 className="text-xl text-white dark:text-gray-100 font-semibold mb-2">
                       {item.title}
                     </h3>
-                    <div className="text-gray-600 dark:text-gray-300">{item.desc}</div>
+                    <div className="text-gray-600 text-white">{item.desc}</div>
                   </div>
                 </li>
               ))}
