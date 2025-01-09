@@ -60,7 +60,7 @@ const Features = () => {
   
 
   return (
-    <SectionWrapper id="features" className="dark:my-0 bg-gray-50 dark:bg-gray-900 sm:my-16">
+    <SectionWrapper id="features" className="py-5 sm:py-28 bg-gray-900 dark:my-0 bg-gray-50 dark:bg-gray-900 sm:my-16">
       <div className="custom-screen text-gray-600 dark:text-gray-300">
         <div className="max-w-7xl mx-auto px-8 py-10">
           <h2 className="text-white dark:text-gray-50 text-3xl font-semibold sm:text-4xl mb-6 ">
