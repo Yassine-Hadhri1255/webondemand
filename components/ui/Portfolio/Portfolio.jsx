@@ -84,7 +84,7 @@ const Portfolio = () => (
         <h2 className="text-green-600 dark:text-green-400 text-3xl font-semibold sm:text-4xl text-center mb-6">
           Quelques Projets
         </h2>
-        <div className="text-center text-gray-600 dark:text-gray-300 mb-12 text-lg">
+        <div className="text-center   dark:text-gray-300 mb-12 text-lg text-white">
           Libérer le pouvoir de l'innovation et de la créativité
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
